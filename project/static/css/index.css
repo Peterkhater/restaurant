@@ -1,0 +1,421 @@
+body {
+  margin: 20px;
+  padding: 0;
+  text-align: center;
+}
+.containe_gallr{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-auto-rows: 100px 300px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.gallery-item{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition:.5s ease-in-out;
+}
+
+.gallery-item:hover .image img{
+  transform: scale(1.5);
+}
+
+.gallery-item .text{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 25px;
+  pointer-events: none;
+  z-index: 4;
+  transition: .3s ease-in-out;
+  -webkit-backdrop-filter: blur(5px) saturate(1.8);
+  backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.gallery-item:hover .text{
+  opacity: 1;
+  animation: move-down .3s linear;
+  padding: 1em;
+  width: 100%;
+}
+
+.w-1{
+  grid-column: span 1;
+}
+
+.w-2{
+  grid-column: span 2;
+}
+
+.w-3{
+  grid-column: span 3;
+}
+
+.w-4{
+  grid-column: span 4;
+}
+
+.w-5{
+  grid-column: span 5;
+}
+
+.w-6{
+  grid-column: span 6;
+}
+
+.h-1{
+  grid-row: span 1;
+}
+
+.h-2{
+  grid-row: span 2;
+}
+
+.h-3{
+  grid-row: span 3;
+}
+
+.h-4{
+  grid-row: span 4;
+}
+
+.h-5{
+  grid-row: span 5;
+}
+
+.h-6{
+  grid-row: span 6;
+}
+
+@media screen and (max-width:500px){
+  .containe_gallr{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+  grid-column:span 1;
+  }
+  
+  .h-1,.h-2,.h-3,.h-4,.h-5,.h-6{
+  grid-row: span 3;
+  }
+}
+
+
+
+@keyframes move-down{
+
+  0%{
+    top: 10%;
+  }
+  50%{
+    top: 35%;
+  }
+  100%{
+    top: 50%;
+  }
+}
+
+.restaurant-history-text_title{
+  font-size: 63px;
+  line-height: 96.34px;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+  color: #2F7228;
+}
+.restaurant-history-text{
+  font-size: 25px;
+  line-height: 54.19px;
+  color: black;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+}
+
+@media (max-width:1200px) {
+  .restaurant-history-text_title{
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .restaurant-history-text{
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width:600px) {
+  .restaurant-history-text_title{
+    font-size: 40px;
+    line-height: 70px;
+  }
+
+  .restaurant-history-text{
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  max-width: 600px; /* Example max width */
+  overflow: hidden;
+  font-family: Arial, sans-serif; /* Change font to suit your design */
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Fading effect at the bottom of the image */
+.image-container .fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  pointer-events: none; 
+}
+
+
+.image-container .content-overlay {
+  position: absolute;
+  bottom: 0px;  
+  color: #000; 
+  z-index: 10; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container .content-overlay h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.image-container .content-overlay p {
+  /* font-size: 1rem; */
+  margin: 0 0 15px;
+  max-width: 100%; 
+}
+
+.image-container .content-overlay .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 7px;
+  padding:5px 40px;
+  align-self: end;
+  margin-bottom: 5px;
+}
+
+.image-container .content-overlay .button:hover {
+  background-color: #444; 
+}
+
+
+@media (max-width:992px){
+  .image-container .content-overlay {
+    position: absolute;
+    bottom: 0px;  
+    color: #000; 
+    z-index: 10; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .image-container .content-overlay h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .image-container .content-overlay p {
+    margin: 0 0;
+    max-width: 100%; 
+    font-size: small;
+    line-height: 15px;
+  }
+}
+
+@media(max-width:431px){
+  .image-container .content-overlay h2{
+    font-size: 1rem;
+    margin: 0 0 5px;
+  }
+  .image-container .content-overlay .button {
+  padding: 5px 25px;
+  }
+  .image-container .fade-overlay{
+    height: 70%;
+  }
+}
+.menuArrowText{
+  font-family: "Dancing Script", cursive;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .........../Food Menu/............ */
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  gap: 4rem; 
+}
+
+
+
+
+.food-menu-container img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  flex: 1 1 calc(50% - 2rem); 
+  display: flex; 
+  justify-content: space-evenly; 
+  margin-bottom: 1rem; 
+  box-sizing: border-box; 
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color:#2F7228;
+  font-weight: 700;
+}
+
+@media (max-width:1050px){
+  .food-titile{
+    font-size: 1rem;
+  }
+  
+  .food-menu-container img {
+    display: block;
+    width: 120px;
+    height: 120px;
+  }
+  
+}
+
+@media(max-width:943px){
+  .food-titile{
+    font-size: 1.2rem;
+  }
+  .food-description p {
+    font-size: 0.7rem;
+
+  }
+
+  .food-menu-container img {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@media(max-width:670px){
+  .food-menu-container img {
+    display: block;
+    width: 80px;
+    height: 80px;
+  }
+  .food-description{
+    margin: 0;
+  }
+  .food-menu-item {
+    flex: 1 1 calc(50% ); }
+}
+
+@media(max-width:500px){
+  .food-titile{
+    font-size: 1.1rem;
+  }
+  .food-description{
+    font-size: 0.5rem;
+  }
+  
+  .food-menu-container img {
+    display: block;
+    width: 90px;
+    height: 90px;
+  }
+}

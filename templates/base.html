@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our collection of luxury perfumes for men and women. Affordable prices, fast shipping, and premium fragrances for every occasion.">
+
+    <title>La Pizeria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+        {%block css%}
+    
+        {%endblock css%}
+</head>
+
+<body>
+    <nav class="nav_container">
+        <div class="nav_top">
+            <div class="container-fluid nav_logo_container">
+                <img class="nav_logo" src="{%static 'images/logo.png'%}" alt="">
+            </div>
+            <div class="container nav_text_container">
+                <h1 class="nav_text_title">La Pizzeria</h1>
+                <h2 class="nav_text_small">Restaurant<br> Brasserie - Grill<br> Spécialité Libanaise</h2>
+            </div>
+        </div>
+        <div class="nav_bottom">
+            <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{% url "restaurant" %}#HistoryOfRestaurant">Histoire du restaurant</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url "restaurant" %}#food-menu">Menus</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url "restaurant" %}#">Événements Privés - Traiteur</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url "restaurant" %}#gallery_id">Galerie</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% block mainContent %}
+
+    {% endblock mainContent %}
+
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="{% static "js/main.js" %}"></script>
+    {%block js %} {%endblock js%}
+    {% comment %} <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> {% endcomment %}
+
+</body>
+
+</html>

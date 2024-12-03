@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block css%}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{%endblock css%}
+{% block mainContent %}
+    <div class="container">
+        <div class="row mb-5 mt-4">
+            <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center">
+                  <div class="image-container">
+                    <img src="{%static 'images/homeImg1.jpg'%}" class="w-100 h-100" alt=" "/>
+                    <div class="content-overlay">
+                    <div class="container-fluid">
+                      <h2><span style="font-weight:400;">TABLES</span> GASTRONOMIQUES</h2>
+                      <p>Le chef Alan Geaam et L’Auberge du Désert, deux tables gastronomiques d’exception.</p>
+                    </div>
+                      <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                    </div>
+                    <div class="fade-overlay"></div>
+                  </div>
+            </div>
+            <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center">
+                <div class="image-container">
+                    <img src="{%static 'images/homeImg2.jpg'%}" class="w-100 h-100" alt="lebanon foods">
+                    <div class="content-overlay">
+                    <div class="container-fluid">
+                      <h2><span style="font-weight:400;">Cuisine</span> Libanaise</h2>
+                      <p>La famille Qasti et Faurn, six adresses pour (re)découvrir la cuisine libanaise.</p>
+                    </div>
+                      <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                    </div>
+                    <div class="fade-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-5 client_container">
+        <div class="elfsight-app-de40a6c7-d0b4-4aea-85a8-db3f4accceab" data-elfsight-app-lazy></div>
+    </div>
+
+    <h1>gallery</h1>
+    <div class="containe_gallr mb-5 container" id="gallery_id">
+    
+        {% for gall in gallery %}
+        <div class="gallery-container w-3 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="{{gall.images.url}}" alt="nature">
+              </div>
+              <div class="text">{{gall.text}}</div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+
+   
+<hr>
+<div class="container my-5 restauran_history w-100 h-100 d-flex justify-content-center align-item-center" >
+    <div class="row  w-100 h-100" id="HistoryOfRestaurant">
+        <h1  class="restaurant-history-text_title d-lg-none text-center">
+            Histoire du Restaurant
+        </h1>
+        <div class="col-12 col-lg-6  w-100 h-100">
+            <img class="w-100" src="{%static 'images/restaurant history.png'%}" alt="">
+        </div>
+        <div class="col-12 col-lg-6">
+            <h1  class="restaurant-history-text_title d-lg-block d-none text-center ">
+                Histoire du Restaurant
+            </h1>
+            <h1 class="restaurant-history-text mt-2">Fort de plus de 30 ans d'expérience, le chef Elie vous invite à découvrir son dernier restaurant à Solesmes, où se rejoignent ses deux grandes passions :<span style="color: #2F7228; "> la cuisine libanaise et la cuisine italienne.</span> Un mariage unique de saveurs méditerranéennes, élaboré avec soin pour vous faire voyager à travers des mets authentiques et raffinés. Plongez dans une expérience culinaire qui réunit traditions et créativité, pour une aventure gustative inoubliable.</h1>
+            <div class=" container checkmenycontainer w-100 d-flex justify-content-end align-item-center">
+                <div class="h-100 align-item-center" style="width: 150px;">
+                    <p class="m-0 menuArrowText" style="color: #2F7228; font-size: 32px;"><a href="#" style="text-decoration: none; color: inherit;">Menus</a></p>
+                    <br>
+                    <img class="w-100" style="height: 50px;" src="{%static 'images/right-arrow.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<section class="food-menu-type container">
+    <div class="row ">
+
+        <div class="col-lg-6 col-md-12 my-5 d-flex justify-content-center align-item-center">
+            <div class="image-container">
+                <img src="{%static 'images/Menu à Emporter.webp'%}" class="w-100 h-100" alt="lebanon foods">
+                <div class="content-overlay">
+                <div class="container-fluid">
+                  <h2><span style="font-weight:400;">Menu</span> A Emporter</h2>
+                  <p>Commandez et dégustez nos plats où vous voulez.</p>
+                </div>
+                  <a href="#" class="button">Aller Au Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="fade-overlay"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 my-5 d-flex justify-content-center align-item-center">
+            <div class="image-container">
+                <img src="{%static 'images/menu en salle.webp'%}" class="w-100 h-100" alt="lebanon foods">
+                <div class="content-overlay">
+                <div class="container-fluid">
+                  <h2><span style="font-weight:400;">Menu</span> En Salle</h2>
+                  <p>Savourez nos plats dans une ambiance chaleureuse et conviviale.</p>
+                </div>
+                  <a href="#" class="button">Aller Au Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                </div>
+                <div class="fade-overlay fade-overlay-menu"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- <section id="food-menu">
+    <h2 class="food-menu-heading">Food Menu</h2>
+    <div class="food-menu-container container-fluid">
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 1 <span style="font-size: small;" class="text-success">(TEXT SMALL)</span></h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg" alt="error" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 5</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item bg-light" >
+            <div class="food-img">
+                <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 6</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- <model-viewer
+    src="{%static 'images/Aztec skull.glb'%}"
+    alt="A 3D model of an item"
+    ar
+    camera-controls
+    auto-rotate
+    style="width: 100px; height: 100px">
+</model-viewer> -->
+
+
+
+    
+{% endblock mainContent %}
+
+
+{%block js %} 
+<script src="{% static "js/index.js" %}"></script>
+{%endblock js%}
