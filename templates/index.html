@@ -40,7 +40,7 @@
     <div class="container mt-5 client_container">
         <div class="elfsight-app-de40a6c7-d0b4-4aea-85a8-db3f4accceab" data-elfsight-app-lazy></div>
     </div>
-
+   
     <h1>gallery</h1>
     <div class="containe_gallr mb-5 container" id="gallery_id">
     
@@ -73,7 +73,7 @@
             <h1 class="restaurant-history-text mt-2">Fort de plus de 30 ans d'expérience, le chef Elie vous invite à découvrir son dernier restaurant à Solesmes, où se rejoignent ses deux grandes passions :<span style="color: #2F7228; "> la cuisine libanaise et la cuisine italienne.</span> Un mariage unique de saveurs méditerranéennes, élaboré avec soin pour vous faire voyager à travers des mets authentiques et raffinés. Plongez dans une expérience culinaire qui réunit traditions et créativité, pour une aventure gustative inoubliable.</h1>
             <div class=" container checkmenycontainer w-100 d-flex justify-content-end align-item-center">
                 <div class="h-100 align-item-center" style="width: 150px;">
-                    <p class="m-0 menuArrowText" style="color: #2F7228; font-size: 32px;"><a href="#" style="text-decoration: none; color: inherit;">Menus</a></p>
+                    <p class="m-0 menuArrowText" style="color: #2F7228; font-size: 32px;"><a href="#menu-type" style="text-decoration: none; color: inherit;">Menus</a></p>
                     <br>
                     <img class="w-100" style="height: 50px;" src="{%static 'images/right-arrow.png'%}" alt="">
                 </div>
@@ -83,9 +83,8 @@
     </div>
 </div>
 
-<section class="food-menu-type container">
-    <div class="row ">
-
+<section class="food-menu-type container" id="menu-type">
+    <div class="row">
         <div class="col-lg-6 col-md-12 my-5 d-flex justify-content-center align-item-center">
             <div class="image-container">
                 <img src="{%static 'images/Menu à Emporter.webp'%}" class="w-100 h-100" alt="lebanon foods">
@@ -108,7 +107,7 @@
                   <h2><span style="font-weight:400;">Menu</span> En Salle</h2>
                   <p>Savourez nos plats dans une ambiance chaleureuse et conviviale.</p>
                 </div>
-                  <a href="#" class="button">Aller Au Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                  <a href="{% url "menu" %}" class="button">Aller Au Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
                 </div>
                 <div class="fade-overlay fade-overlay-menu"></div>
             </div>

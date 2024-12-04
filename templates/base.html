@@ -32,24 +32,28 @@
                 <h1 class="nav_text_title">La Pizzeria</h1>
                 <h2 class="nav_text_small">Restaurant<br> Brasserie - Grill<br> Spécialité Libanaise</h2>
             </div>
+            <button class="nav_toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
         </div>
         <div class="nav_bottom">
             <ul class="nav_ul">
                 <li class="nav_li">
-                    <a href="{% url "restaurant" %}#HistoryOfRestaurant">Histoire du restaurant</a>
+                    <a href="{% url 'restaurant' %}#HistoryOfRestaurant">Histoire du restaurant</a>
                 </li>
                 <li class="nav_li">
-                    <a href="{% url "restaurant" %}#food-menu">Menus</a>
+                    <a href="{% url 'restaurant' %}#menu-type">Menus</a>
                 </li>
                 <li class="nav_li">
-                    <a href="{% url "restaurant" %}#">Événements Privés - Traiteur</a>
+                    <a href="{% url 'restaurant' %}#">Événements Privés - Traiteur</a>
                 </li>
                 <li class="nav_li">
-                    <a href="{% url "restaurant" %}#gallery_id">Galerie</a>
+                    <a href="{% url 'restaurant' %}#gallery_id">Galerie</a>
                 </li>
             </ul>
         </div>
     </nav>
+    
     {% block mainContent %}
 
     {% endblock mainContent %}
@@ -63,6 +67,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="{% static "js/main.js" %}"></script>
+
+<script src="{% static "js/base.js" %}"></script>
+
     {%block js %} {%endblock js%}
     {% comment %} <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> {% endcomment %}
 

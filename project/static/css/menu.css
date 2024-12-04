@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Poppins|Source+Sans+Pro|Montserrat:400,900&display=swap");
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+  font-family: "Source Sans Pro", "Poppins", sans-serif;
+}
+
+.menu {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-top: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+  padding: 5px 5px 0px 0;
+  border-radius: 5px;
+}
+.menu-item-price{
+  color: #2F7228;
+}
+.menu-item-img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  font-size: large;
+}
+
+.menu-item-desc {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+
+.category_list_container{
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(246, 246, 246);
+}
+.category_list_container::-webkit-scrollbar{
+  width: 100px; 
+  height: 10px;
+  background-color: #ccc;
+}
+.category_list_container::-webkit-scrollbar-track{
+  background-color: white;
+}
+.category_list_container::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+.category_list_container>ul{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.category_list_container>ul>a>li{
+  margin: 10px;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 6px;
+  padding:5px;
+  list-style: none;
+  text-wrap: nowrap;
+  font-family: "Source Sans Pro", "Poppins", sans-serif;
+  transition: 1s;
+}
+
+.category_list_container>ul>a>li:hover{
+   background-color:#2F7228;
+   color: white;
+   transition: 1s;
+}
+
+.category_list_container>ul>a>li:focus {
+  background-color: #2F7228;
+  color: white;
+  transition: 1s;
+}
+
+@media (max-width:500px){
+  .menu-item-name {
+    font-size: small;
+    font-weight: bold;
+  }
+  
+  .menu-item-desc {
+    line-height: 1.3;
+    font-size: smaller;
+  }
+  .menu-item-price{
+font-size: medium;
+  }
+}
