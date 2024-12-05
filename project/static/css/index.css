@@ -419,3 +419,36 @@ body {
     height: 90px;
   }
 }
+
+/* Custom styles for contact form */
+.contact-form-box {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-input {
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact-button {
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #2F7228;
+  color: white;
+}
+
+.contact-map {
+  min-height: 400px;
+}
+
+.contact-info i {
+  color: #2F7228;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #2F7228;
+}

@@ -13,7 +13,7 @@
 
 <div class="category_list_container">
   <ul>
-    
+    <p>Categorie</p>
     {% for cat in cat %}
     <a href="#goto{{ cat.id }}" style="text-decoration: none; color: inherit;">
       <li>{{ cat.category }}</li>
@@ -35,7 +35,7 @@
     
     <div class="menu-group">
       {% for dish in category.dishes.all %}
-        
+        {% if dish.dish_menu_type == "ensalle" %}
         <div class="menu-item shadow">
           {% if dish.dish_images %}
           <img
@@ -45,7 +45,7 @@
           />
           {% else %}
           <img
-            src="{%static 'images/logo.png'%}"
+            src="https://dummyimage.com/600x400/000/fff"
             alt="Placeholder Image"
             class="menu-item-img"
           />
@@ -53,27 +53,16 @@
           <div class="menu-item-text">
             <h3 class="menu-item-heading">
               <span class="menu-item-name">{{ dish.dish_name }}</span>
-              <span class="menu-item-price">€{{ dish.dish_price }}</span>
+              <span class="menu-item-price">${{ dish.dish_price }}</span>
             </h3>
             <p class="menu-item-desc">
               {{ dish.dish_description }}
             </p>
-            
-        
-            
           </div>
-          {% if user.is_staff %}
-            <a class="" href="{% url 'admin:restaurant_dishes_change' dish.id %}" target="_blank" rel="noopener noreferrer" style="padding: 5px; font-size: small; background-color: #2F7228; border-radius: 5px; color: white; text-decoration: none;">
-                Modifier
-            </a>
-        {% else %}
-           
-        {% endif %}
         </div>
-        
+        {% endif %}
       {% empty %}
       <p>No dishes available in this category.</p>
-      
       {% endfor %}
     </div>
   </div>
