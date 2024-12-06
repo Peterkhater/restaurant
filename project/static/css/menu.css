@@ -160,9 +160,9 @@ font-size: medium;
 }
 .Menu_en_salle_h1{
   color: #2F7228;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.5rem;
 }
 .welcomeImgContainer > img {
   border-radius: 10px;
@@ -181,4 +181,39 @@ font-size: medium;
     object-fit: cover;
     object-position: start;
   }
+}
+
+.fixed-tel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 9999;
+  text-align: center;
+}
+
+.wp{
+  bottom: 80px;
+}
+.fixed-tel:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #2F7228;
+  position: absolute;
+  border-radius: 100%;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.fixed-tel i {
+  vertical-align: middle;
+  z-index: 2;
+  position: relative;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
