@@ -40,8 +40,26 @@
     {% comment %} <div class="container mt-5 client_container">
         <div class="elfsight-app-de40a6c7-d0b4-4aea-85a8-db3f4accceab" data-elfsight-app-lazy></div>
     </div> {% endcomment %}
-   
-  
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+          <div id="TA_cdsratingsonlynarrow160" class="TA_cdsratingsonlynarrow"><ul id="mMBKsFv3Dh" class="TA_links bleGIsH"><li id="VFSllgxJWIxB" class="3YymBYDL0Q"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=160&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;shadow=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+          <div id="TA_linkingWidgetRedesign517" class="TA_linkingWidgetRedesign d-flex justify-content-center align-item-center"><ul id="73bGuvFge4y" class="TA_links ivSWaLz"><li id="fLyVdyEsvlmV" class="QhlVcMY"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=linkingWidgetRedesign&amp;uniq=517&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+          <div id="TA_cdswritereviewlg264" class="TA_cdswritereviewlg"><ul id="Mzougnp" class="TA_links l9UcKha"><li id="0OKiprDJ" class="9TEB8jji66"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=264&amp;locationId=27143834&amp;lang=fr&amp;lang=fr&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+        </div>
+      </div>
+      
+      <iframe src="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html" width="100%" height="500px" frameborder="0"></iframe>
+
+    </div>
+    
 
     <h1>gallery</h1>
     <div class="containe_gallr mb-5 container" id="gallery_id">
@@ -91,24 +109,20 @@
     <!-- Contact Form Section -->
     <div class="col-md-6 p-4 bg-light contact-form-box">
       <h2 class="mb-4" style="color:#2F7228;">Contactez-nous</h2>
-      <form>
+      <form id="contactForm">
         <div class="mb-3">
           <label for="fullName" class="form-label">Nom et prénom</label>
-          <input type="text" id="fullName" class="form-control contact-input" placeholder="Name">
-        </div>
-        <div class="mb-3">
-          <label for="emailAddress" class="form-label">Adresse email</label>
-          <input type="email" id="emailAddress" class="form-control contact-input" placeholder="Email">
+          <input type="text" id="fullName" class="form-control contact-input" placeholder="Name" required>
         </div>
         <div class="mb-3">
           <label for="subject" class="form-label">Sujet</label>
-          <input type="text" id="subject" class="form-control contact-input" placeholder="Subject">
+          <input type="text" id="subject" class="form-control contact-input" placeholder="Subject" required>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
-          <textarea id="message" rows="4" class="form-control contact-input" placeholder="Message"></textarea>
+          <textarea id="message" rows="4" class="form-control contact-input" placeholder="Message" required></textarea>
         </div>
-        <button type="submit" class="btn w-100 contact-button">Envoyer un message via WhatsApp</button>
+        <button type="button" class="btn w-100 contact-button" onclick="sendMessage()">Envoyer un message via WhatsApp</button>
       </form>
     </div>
     <!-- Map Section -->
@@ -175,90 +189,7 @@
     </div>
 </section>
 
-<!-- <section id="food-menu">
-    <h2 class="food-menu-heading">Food Menu</h2>
-    <div class="food-menu-container container-fluid">
-        <div class="food-menu-item">
-            <div class="food-img">
-                <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 1 <span style="font-size: small;" class="text-success">(TEXT SMALL)</span></h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
 
-        <div class="food-menu-item">
-            <div class="food-img">
-                <img src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg" alt="error" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
-        <div class="food-menu-item">
-            <div class="food-img">
-                <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
-        <div class="food-menu-item">
-            <div class="food-img">
-                <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 4</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
-        <div class="food-menu-item">
-            <div class="food-img">
-                <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 5</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
-        <div class="food-menu-item bg-light" >
-            <div class="food-img">
-                <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
-            </div>
-            <div class="food-description">
-                <h2 class="food-titile">Food Menu Item 6</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-                    quae.
-                </p>
-                <p class="food-price">Price: &#8377; 250</p>
-            </div>
-        </div>
-    </div>
-</section> -->
 <!-- <model-viewer
     src="{%static 'images/Aztec skull.glb'%}"
     alt="A 3D model of an item"

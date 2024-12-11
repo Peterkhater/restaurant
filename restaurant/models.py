@@ -62,3 +62,19 @@ class DishesAEmporter(models.Model):
     
     class Meta:
         verbose_name = 'plat du menu menu a (Emporter)'
+
+class MySetting(models.Model):
+   phone = models.CharField( max_length=40,  blank=True, null=True)
+   email = models.EmailField(max_length=254, null=True, blank=True)
+   instagramLink = models.TextField(blank=True, null=True)
+   facebookLink = models.TextField(blank=True, null=True)
+   website_url = models.URLField(max_length=200, blank=True, null=True)
+   address = models.CharField(max_length=255, blank=True, null=True)
+   business_name = models.CharField(max_length=100, blank=True, null=True)
+   logo = models.ImageField(upload_to='photos', blank=True, null=True)
+   linkedinLink = models.URLField(max_length=200, blank=True, null=True)
+   created_at = models.DateTimeField(auto_now_add=True)
+   updated_at = models.DateTimeField(auto_now=True)
+   description = models.TextField(blank=True, null=True)
+   owner_name = models.CharField(max_length=100, blank=True, null=True)
+   owner_img =  models.ImageField(upload_to='photos', blank=True, null=True)
