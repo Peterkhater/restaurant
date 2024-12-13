@@ -3,7 +3,7 @@ from .models import Gallery,DishCategory,Dishes,DishCategoryEmporter,DishesAEmpo
 
 def main(request):
     gallery = Gallery.objects.all()
-    setting = MySetting.objects.get()
+    setting = MySetting.objects.last()
     return render(request,'index.html',{'gallery':gallery,'setting':setting})
 
 def menu(request):

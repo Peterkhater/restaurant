@@ -36,7 +36,7 @@
     <div class="menu-group">
       {% for dish in category.dishes.all %}
         
-        <div class="menu-item shadow">
+        <div class="menu-item shadow goingup">
           {% if dish.dish_images %}
           <img
             src="{{ dish.dish_images.url }}"
@@ -83,3 +83,18 @@
 </main>
 
 {% endblock mainContent %}
+
+{%block js %} 
+<script> 
+  ScrollReveal().reveal('.goingup', {
+    duration: 500,
+    delay: 100,
+    distance: '50px',
+    origin: 'bottom',
+    opacity: 0,
+    easing: 'ease-in-out',
+    interval: 200,
+    reset: true
+  });
+</script>
+{%endblock js%}

@@ -7,9 +7,9 @@
 {% block mainContent %}
     <div class="container">
         <div class="row mb-5 mt-4">
-            <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center">
-                  <div class="image-container">
-                    <img src="{%static 'images/homeImg1.jpg'%}" class="w-100 h-100" alt=" "/>
+            <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center goingup ">
+                  <div class="image-container" id="img_cont">
+                    <img src="{%static 'images/homeImg1.jpg'%}" class="w-100 h-100" alt=" " style="border-radius:5px"/>
                     <div class="content-overlay">
                     <div class="container-fluid">
                       <h2><span style="font-weight:400;">TABLES</span> GASTRONOMIQUES</h2>
@@ -17,12 +17,12 @@
                     </div>
                       <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
                     </div>
-                    <div class="fade-overlay"></div>
+                    <div class="fade-overlay" id="fade_overlay_id"></div>
                   </div>
             </div>
             <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center">
-                <div class="image-container">
-                    <img src="{%static 'images/homeImg2.jpg'%}" class="w-100 h-100" alt="lebanon foods">
+              <div class="image-container" id="img_cont2">
+                    <img src="{%static 'images/homeImg2.jpg'%}" class="w-100 h-100" alt="lebanon foods" style="border-radius:5px">
                     <div class="content-overlay">
                     <div class="container-fluid">
                       <h2><span style="font-weight:400;">Cuisine</span> Libanaise</h2>
@@ -30,8 +30,9 @@
                     </div>
                       <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
                     </div>
-                    <div class="fade-overlay"></div>
-                </div>
+                    
+                    <div class="fade-overlay" id="fade_overlay_id2"></div>
+                </div> 
             </div>
         </div>
     </div>
@@ -43,7 +44,7 @@
     <div class="container">
       
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center" id="Tripadvisor_id">
           <div id="TA_cdsratingsonlynarrow160" class="TA_cdsratingsonlynarrow d-flex justify-content-center align-item-center"><ul id="mMBKsFv3Dh" class="TA_links bleGIsH"><li id="VFSllgxJWIxB" class="3YymBYDL0Q"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=160&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;shadow=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
         </div>
 
@@ -56,7 +57,7 @@
         </div>
       </div>
       
-      <iframe src="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html" width="100%" height="500px" frameborder="0"></iframe>
+      <iframe src="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html" width="100%" height="500px" frameborder="0" class="goingup"></iframe>
 
     </div>
     
@@ -65,7 +66,7 @@
     <div class="containe_gallr mb-5 container" id="gallery_id">
     
         {% for gall in gallery %}
-        <div class="gallery-container w-3 h-2">
+        <div class="gallery-container w-3 h-2 goingup">
             <div class="gallery-item">
               <div class="image">
                 <img src="{{gall.images.url}}" alt="nature">
@@ -78,7 +79,7 @@
 
    
 <hr>
-<div class="container my-5 restauran_history w-100 h-100 d-flex justify-content-center align-item-center" >
+<div class="container my-5 restauran_history w-100 h-100 d-flex justify-content-center align-item-center goingup" >
     <div class="row  w-100 h-100" id="HistoryOfRestaurant">
         <h1  class="restaurant-history-text_title d-lg-none text-center">
             Histoire du Restaurant
@@ -87,7 +88,7 @@
             <img class="w-100" src="{%static 'images/restaurant history.png'%}" alt="">
         </div>
         <div class="col-12 col-lg-6">
-            <h1  class="restaurant-history-text_title d-lg-block d-none text-center ">
+            <h1  class="restaurant-history-text_title d-lg-block d-none text-center " id="aboutUs_id">
                 Histoire du Restaurant
             </h1>
             <h1 class="restaurant-history-text mt-2">Fort de plus de 30 ans d'expérience, le chef Elie vous invite à découvrir son dernier restaurant à Solesmes, où se rejoignent ses deux grandes passions :<span style="color: #2F7228; "> la cuisine libanaise et la cuisine italienne.</span> Un mariage unique de saveurs méditerranéennes, élaboré avec soin pour vous faire voyager à travers des mets authentiques et raffinés. Plongez dans une expérience culinaire qui réunit traditions et créativité, pour une aventure gustative inoubliable.</h1>
@@ -104,10 +105,10 @@
 </div>
 
 
-<div class="container my-5" id="Contactez_nous">
+<div class="container my-5" id="Contactez_nous goingup">
   <div class="row">
     <!-- Contact Form Section -->
-    <div class="col-md-6 p-4 bg-light contact-form-box">
+    <div class="col-md-6 p-4 bg-light contact-form-box goingup">
       <h2 class="mb-4" style="color:#2F7228;">Contactez-nous</h2>
       <form id="contactForm">
         <div class="mb-3">
@@ -130,33 +131,30 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.3319554793447!2d-0.30308622460648244!3d47.8525339709638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48083900008c5c69%3A0x262597db06552099!2sLa%20Pizzeria!5e0!3m2!1sen!2slb!4v1708612676127!5m2!1sen!2slb"
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-        class="contact-map">
+        class="contact-map goingup">
       </iframe>
     </div>
   </div>
 
   <!-- Contact Info Section -->
   <div class="row text-center mt-5">
-    <div class="col-md-3 contact-info">
-      <p><strong><i class="fa-solid fa-address-book"></i></strong> 198 West 21th Street, Suite 721 New York NY 10016</p>
+    <div class="col-md-4 contact-info">
+      <p><strong><i class="fa-solid fa-address-book"></i></strong> {{setting.address}}</p>
     </div>
-    <div class="col-md-3 contact-info">
+    <div class="col-md-4 contact-info">
       <i class="bi bi-telephone fs-3 mb-2"></i>
-      <p><strong><i class="fa-solid fa-phone"></i></strong> +1235 2355 98</p>
+      <p><strong><i class="fa-solid fa-phone"></i></strong> {{setting.phone}}</p>
     </div>
-    <div class="col-md-3 contact-info">
+    <div class="col-md-4 contact-info">
       <i class="bi bi-envelope fs-3 mb-2"></i>
-      <p><strong><i class="fa-solid fa-envelope"></i></strong> info@yoursite.com</p>
+      <p><strong><i class="fa-solid fa-envelope"></i></strong> {{setting.email}}</p>
     </div>
-    <div class="col-md-3 contact-info">
-      <i class="bi bi-globe fs-3 mb-2"></i>
-      <p><strong>Website:</strong> yoursite.com</p>
-    </div>
+    
   </div>
 </div>
     
 
-<section class="food-menu-type container" id="menu-type">
+<section class="food-menu-type container goingup" id="menu-type">
     <div class="row">
         <div class="col-lg-6 col-md-12 my-5 d-flex justify-content-center align-item-center">
             <div class="image-container">
@@ -200,11 +198,51 @@
 </model-viewer> -->
 
 
-
+<hr>
+<div class="container my-5 restauran_history w-100 h-100 d-flex justify-content-center align-item-center goingup" >
+    <div class="row  w-100 h-100" id="HistoryOfRestaurant">
+        <h1  class="restaurant-history-text_title d-lg-none text-center">
+          Commandes pour Événements Privés
+        </h1>
+        <div class="col-12 col-lg-6  w-100 h-100">
+            <img class="w-100" src="{%static 'images/restaurant history.png'%}" alt="">
+        </div>
+        <div class="col-12 col-lg-6">
+            <h1  class="restaurant-history-text_title d-lg-block d-none text-center " id="commandspour">
+              Commandes pour Événements Privés
+            </h1>
+            <h1 class="restaurant-history-text mt-2">Organisez un événement en toute simplicité avec notre service de commande en grande quantité. Que ce soit pour un anniversaire, une fête de famille ou une réunion entre amis, il est possible de commander nos spécialités libanaises et italiennes en avance et en grande quantité. Préparez-vous à régaler vos invités avec des plats authentiques et savoureux !</h1>
+            <div class=" container checkmenycontainer w-100 d-flex justify-content-end align-item-center">
+                <div class="h-100 align-item-center" style="width: 150px;">
+                    <p class="m-0 menuArrowText" style="color: #2F7228; font-size: 25px;"><a href="#menu-type" style="text-decoration: none; color: inherit;">RESERVATIONS</a></p>
+                    <br>
+                    <img class="w-100" style="height: 50px;" src="{%static 'images/right-arrow.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
     
 {% endblock mainContent %}
 
 
 {%block js %} 
 <script src="{% static "js/index.js" %}"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+<script> 
+  ScrollReveal().reveal('.goingup', {
+    duration: 500,
+    delay: 100,
+    distance: '50px',
+    origin: 'bottom',
+    opacity: 0,
+    easing: 'ease-in-out',
+    interval: 200,
+    reset: true
+  });
+</script>
+
 {%endblock js%}

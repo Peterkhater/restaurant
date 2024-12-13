@@ -72,12 +72,77 @@
         </div>
     </nav>
     
-    <div class="container-fluid allContent">
+    <div class="allContent">
     {% block mainContent %}
 
     {% endblock mainContent %}
     </div>
 
+      <!-- footer section start -->
+      <footer id="footer">
+        <div class="">
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#"><img src="{% static "images/logo.png" %}" alt="" class="img-fluid logo-footer"></a>
+                        <div class="footer-about">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
+                        </div>
+  
+            </div>
+            <div class="col-md-3">
+              <div class="useful-link">
+                <h2>Useful Links</h2>
+                <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+                <div class="use-links">
+                  <li><a href="{% url "restaurant" %}#gallery_id"><i class="fa-solid fa-angles-right"></i> gallery</a></li>
+                  <li><a href="{% url "restaurant" %}#Tripadvisor_id"><i class="fa-solid fa-angles-right"></i> TripAdvisor</a></li>
+                  <li><a href="{% url "restaurant" %}#aboutUs_id"><i class="fa-solid fa-angles-right"></i>Histoire du Restaurant</a></li>
+                  <li><a href="tel:{{setting.phone}}"><i class="fa-solid fa-angles-right"></i>Contactez-nous</a></li>
+                  <li><a href="{% url "restaurant" %}#commandspour"><i class="fa-solid fa-angles-right"></i> Commandes pour Événements Privés</a></li>
+                  <li><a href="{% url "restaurant" %}#menu-type"><i class="fa-solid fa-angles-right"></i>Menu</a></li>
+                </div>
+              </div>
+  
+            </div>
+                      <div class="col-md-3">
+                          <div class="social-links">
+                <h2>Follow Us</h2>
+                <img src="./assets/images/about/home_line.png" alt="">
+                <div class="social-icons">
+                  <li><a href="{{setting.facebookLink}}"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                  <li><a href="{{setting.instagramLink}}"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                </div>
+              </div>
+                      
+  
+                      </div>
+            <div class="col-md-3">
+              <div class="address">
+                <h2>Address</h2>
+                <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+                <div class="address-links">
+                  <li class="address1"><i class="fa-solid fa-location-dot"></i> {{setting.address}}</li>
+                     <li><a href=""><i class="fa-solid fa-phone"></i> {{setting.phone}}</a></li>
+                     <li><a href=""><i class="fa-solid fa-envelope"></i> {{setting.email}}</a></li>
+                </div>
+              </div>
+            </div>
+                    
+          </div>
+        </div>
+  
+      </footer>
+      <!-- footer section end -->
+      <!-- footer copy right section start -->
+      <section id="copy-right">
+        <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+          lorem ispum lorem ispum 2022 Powerd By <a href="#">lorem ispum</a> 
+  
+  
+        </div>
+  
+      </section>
+      <!-- footer copy right section end -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -87,7 +152,7 @@
     <script src="{% static "js/main.js" %}"></script>
 
 <script src="{% static "js/base.js" %}"></script>
-
+<script src="https://unpkg.com/scrollreveal"></script>
     {%block js %} {%endblock js%}
     {% comment %} <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> {% endcomment %}
 
