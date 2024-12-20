@@ -39,7 +39,7 @@
 .menu-item {
   display: flex;
   padding: 5px 0px 0px 0;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   min-height: 80px;
 }
 .menu-item-price{
@@ -167,6 +167,7 @@ font-size: medium;
 .welcomeImgContainer > img {
   border-radius: 10px;
 }
+
 
 @media(min-width:769px){
   .welcomeImgContainer {

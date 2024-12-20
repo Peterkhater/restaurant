@@ -39,19 +39,35 @@ $(document).ready(function() {
   let fade_overlay_id2 = document.getElementById('fade_overlay_id2')
 
   img_cont.onmouseenter=function(){
-    fade_overlay_id.style.height="80%";   
+    fade_overlay_id.style.height="95%";   
   }
   
   img_cont.onmouseleave=function(){
-    fade_overlay_id.style.height="50%"
+    fade_overlay_id.style.height="80%"
   }
   
   
   img_cont_2.onmouseenter=function(){
-    fade_overlay_id2.style.height="80%";
+    fade_overlay_id2.style.height="95%";
   }
 
   img_cont_2.onmouseleave=function(){
-    fade_overlay_id2.style.height="50%"
+    fade_overlay_id2.style.height="80%"
   }
   
+
+  $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
+});
+$(document).ready(function() {
+  $('.opening-hours li').eq(new Date().getDay()).addClass('today');
+  });

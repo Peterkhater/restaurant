@@ -78,3 +78,21 @@ class MySetting(models.Model):
    description = models.TextField(blank=True, null=True)
    owner_name = models.CharField(max_length=100, blank=True, null=True)
    owner_img =  models.ImageField(upload_to='photos', blank=True, null=True)
+
+class Reviews(models.Model):
+    review_owner = models.CharField( max_length=500,  blank=True, null=True)
+    content = models.TextField(blank=True,null=True)
+    stars = models.IntegerField(default=3)
+    Review_person_img =  models.ImageField(upload_to='photos', blank=True, null=True)
+    def __str__(self):
+        return f"{self.review_owner}"
+    
+class OppeningDay(models.Model):
+    day = models.CharField(max_length=100, blank=True, null=True)
+    oppened = models.BooleanField(default=True, blank=True, null=True)
+    from1 = models.CharField(max_length=100, blank=True, null=True)
+    to1 = models.CharField(max_length=100, blank=True, null=True)
+    from2 = models.CharField(max_length=100, blank=True, null=True)
+    to2 = models.CharField(max_length=100, blank=True, null=True)
+    def __str__(self):
+        return f"{self.day}"

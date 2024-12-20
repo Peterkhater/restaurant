@@ -15,7 +15,10 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+         
     <link rel="stylesheet" href="{% static "css/base.css" %}">
         {%block css%}
     
@@ -66,6 +69,9 @@
                     <a href="{% url 'restaurant' %}#">Événements Privés - Traiteur</a>
                 </li>
                 <li class="nav_li">
+                    <a href="{% url 'restaurant' %}#openingDayId">Jours et horaires d'ouverture</a>
+                </li>
+                <li class="nav_li">
                     <a href="{% url 'restaurant' %}#gallery_id">Galerie</a>
                 </li>
             </ul>
@@ -85,7 +91,9 @@
             <div class="col-md-3">
               <a href="#"><img src="{% static "images/logo.png" %}" alt="" class="img-fluid logo-footer"></a>
                         <div class="footer-about">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
+                              <h3>Notre Développeur</h3>
+                            <p>Notre Développeur
+                              Peter Khater, un développeur web passionné, dédié à la création de sites modernes et captivants.</p>
                         </div>
   
             </div>
@@ -100,6 +108,9 @@
                   <li><a href="tel:{{setting.phone}}"><i class="fa-solid fa-angles-right"></i>Contactez-nous</a></li>
                   <li><a href="{% url "restaurant" %}#commandspour"><i class="fa-solid fa-angles-right"></i> Commandes pour Événements Privés</a></li>
                   <li><a href="{% url "restaurant" %}#menu-type"><i class="fa-solid fa-angles-right"></i>Menu</a></li>
+                  <li><a href="{% url "restaurant" %}#commandspour"><i class="fa-solid fa-angles-right"></i> Commandes pour Événements Privés</a></li>
+                  <li><a href="{% url 'restaurant' %}#openingDayId"><i class="fa-solid fa-angles-right"></i>Jours et horaires d'ouverture</a></li>
+                  
                 </div>
               </div>
   
@@ -149,6 +160,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js'></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ 
     <script src="{% static "js/main.js" %}"></script>
 
 <script src="{% static "js/base.js" %}"></script>
