@@ -12,10 +12,10 @@
                     <img src="{%static 'images/homeImg1.jpg'%}" class="w-100 h-100" alt=" " style="border-radius:5px"/>
                     <div class="content-overlay">
                     <div class="container-fluid">
-                      <h2><span style="font-weight:400;">TABLES</span> GASTRONOMIQUES</h2>
-                      <p>Le chef Alan Geaam et L’Auberge du Désert, deux tables gastronomiques d’exception.</p>
+                      <h2><span style="font-weight:400;">CUISINE</span>  ITALIENNE </h2>
+                      <p>Dégustez les saveurs italiennes dans votre village. </p>
                     </div>
-                      <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                      <a href="#cuisine_italian" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
                     </div>
                     <div class="fade-overlay" id="fade_overlay_id"></div>
                   </div>
@@ -26,9 +26,9 @@
                     <div class="content-overlay">
                     <div class="container-fluid">
                       <h2><span style="font-weight:400;">Cuisine</span> Libanaise</h2>
-                      <p>La famille Qasti et Faurn, six adresses pour (re)découvrir la cuisine libanaise.</p>
+                      <p>Découvrir l’autre partie de la méditéranéen.</p>
                     </div>
-                      <a href="#" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
+                      <a href="#cuisine_libanese" class="button">EN SAVOIR PLUS <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i></a>
                     </div>
                     
                     <div class="fade-overlay" id="fade_overlay_id2"></div>
@@ -59,7 +59,7 @@
       
     </div>
 
-    <div class="container my-5 goingup">
+    <div class="container my-5 ">
       <h2 class="nosClient">Ce que disent nos clients</h2>
       <div class="row d-flex justify-content-center align-item-center">
           <div class="col-md-offset-2 col-md-8">
@@ -90,10 +90,10 @@
     <div class="containe_gallr mb-5 container" id="gallery_id">
     
         {% for gall in gallery %}
-        <div class="gallery-container w-3 h-2 goingup">
-            <div class="gallery-item">
+        <div class="gallery-container w-3 h-2 goingup" style="border-radius: 5px;">
+            <div class="gallery-item" style="border-radius: 5px;">
               <div class="image">
-                <img src="{{gall.images.url}}" alt="nature">
+                <img src="{{gall.images.url}}" alt="nature" style="border-radius: 5px;">
               </div>
               <div class="text">{{gall.text}}</div>
             </div>
@@ -272,44 +272,43 @@
     </div>
 </div>
 
-<!-- 
-<main>
-  <section>
-    <div class="testimonial">
-      <div class="container">
-       <div class="testimonial__inner">
-         <div class="testimonial-slider">
-          {%for rev in reviews%}
-           <div class="testimonial-slide">
-             <div class="testimonial_box">
-               <div class="testimonial_box-inner">
-                 <div class="testimonial_box-top">
-                   <div class="testimonial_box-icon">
-                     <i class="fas fa-quote-right"></i>
-                   </div>
-                   <div class="testimonial_box-text">
-                     <p>{{rev.content}}</p>
-                   </div>
-                   <div class="testimonial_box-img">
-                    <img src="{{rev.Review_person_img.url}}" alt="profile">
-                  </div>
-                  <div class="testimonial_box-name">
-                    <h4>{{rev.review_owner}}</h4>
-                 </div>
-                 <div class="testimonial_box-job">
-                   <p>{{rev.stars}} Stars</p>
-                 </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           {%endfor%}
-         </div>
-       </div>
+<div class="container w-100 d-flex justify-content-center align-item-center" id="cuisine_italian">
+  <div class="row w-100 d-flex justify-content-center align-item-center">
+    <div class="col-md-6 col-12 w-100">
+      <h2 class="text-center">Cuisine Italienne</h2>
+      <p class="text-center descriptionOfLbIL">Cuisine Italienne Plongez dans l’essence de l’Italie avec nos pizzas artisanales et spécialités italiennes. Nos chefs sélectionnent les meilleurs ingrédients pour créer des pizzas croustillantes aux garnitures généreuses, ainsi que des pâtes et antipasti irrésistibles. Savourez des recettes authentiques, préparées dans le respect de la tradition italienne, qui rappellent la chaleur et la passion de la cuisine italienne.</p>
+      <div class="buttons">
+        <a href="{%url 'menu'%}" class="button_category_lb_it">Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;" id="fleshhover"></i></a>
+
+        <a href="tel:+{{setting.phone}}" class="button_category_lb_it button_category_lb_it_white">Contace Nous<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;" id="fleshhover"></i></a>
+
       </div>
     </div>
-  </section>
-</main> -->
+    <div class="col-md-6 col-12 w-100">
+      <img src="{%static 'images/homeImg1.jpg'%}" alt="" class="w-100 img_content_lb_il" style="border-radius: 5px;">
+    </div>
+  </div>
+</div>
+
+<div class="container w-100 my-5 d-flex justify-content-center align-item-center" id="cuisine_libanese">
+  <div class="row w-100 d-flex d-flex justify-content-center align-item-center">
+  <div class="col-md-6 col-12 w-100 ">
+    <h2 class="text-center  d-lg-none">Cuisine Libanaise</h2>
+    <img src="{%static 'images/homeImg2.jpg'%}" alt="" class="w-100 img_content_lb_il" style="border-radius: 5px;">
+  </div>
+    <div class="col-md-6 col-12 w-100 ">
+      <h2 class="text-center d-lg-block d-none">Cuisine Libanaise</h2>
+      <p class="text-center descriptionOfLbIL">Notre restaurant vous invite à un voyage au cœur du Liban, où saveurs et convivialité se rencontrent dans chaque assiette. Découvrez des plats authentiques, allant des mezzés délicats aux grillades parfumées, préparés avec des ingrédients frais et des épices traditionnelles. Que vous soyez amateur de houmous onctueux, de taboulé rafraîchissant ou de chawarma savoureux, chaque bouchée vous transporte vers un monde de délices méditerranéens</p>
+      <div class="buttons">
+        <a href="{%url 'menu'%}#gotoLebanon " class="button_category_lb_it">Menu<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;" id="fleshhover"></i></a>
+
+        <a href="tel:+{{setting.phone}}" class="button_category_lb_it button_category_lb_it_white ">Contace Nous<i class="fa-solid fa-arrow-right-long" style="color: #ffffff;" id="fleshhover"></i></a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- 
 <iframe src="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html" width="100%" height="500px" frameborder="0" class="goingup"></iframe> -->
 

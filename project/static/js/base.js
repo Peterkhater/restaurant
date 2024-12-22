@@ -35,3 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function getCurrentYear(){
+    let now = new Date()
+    let year = now.getFullYear()
+    return year
+}
+
+window.onload=function(){
+    year = document.getElementById('year').textContent=getCurrentYear();
+}

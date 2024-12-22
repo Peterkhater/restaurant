@@ -8,14 +8,14 @@
 {% block mainContent %}
 
 <div class="container-fluid welcomeImgContainer">
-<img src="{%static 'images/menu en salle.webp'%}" class="w-100" alt="" > 
+  <img src="{% static 'images/menu en salle.webp' %}" class="w-100" alt="">
 </div>
 
 <div class="category_list_container">
   <ul>
-    
     {% for cat in cat %}
-    <a href="#goto{{ cat.id }}" style="text-decoration: none; color: inherit;">
+    <a href="{% if "Délices du Liban" in cat.category %}#gotoLebanon{% else %}#goto{{ cat.id }}{% endif %}" 
+       style="text-decoration: none; color: inherit;">
       <li>{{ cat.category }}</li>
     </a>
     {% endfor %}
@@ -25,55 +25,47 @@
 <main class="container">
   <h1 class="Menu_en_salle_h1 text-center">Menu En Salle</h1>
   {% for category in cat %}
-  <div class="menu my-5" id="goto{{ category.id }}">
-    <h2 class="menu-group-heading">{{ category.category }} 
-      <span class="{% if category.note == none %} d-none {% endif %}" 
+  <div class="menu my-5" id="{% if "Délices du Liban" in category.category %}gotoLebanon{% else %}goto{{ category.id }}{% endif %}">
+    <h2 class="menu-group-heading">
+      {{ category.category }}
+      <span class="{% if not category.note %} d-none {% endif %}" 
             style="font-size: small; color: #2F7228; font-weight: bold;">
         {{ category.note }}
       </span>
     </h2>
-    
+
     <div class="menu-group">
       {% for dish in category.dishes.all %}
-        
-        <div class="menu-item  goingup">
-          {% if dish.dish_images %}
-          <img
-            src="{{ dish.dish_images.url }}"
-            alt="{{ dish.dish_name|default:'Image Placeholder' }}"
-            class="menu-item-img"
-          />
-          {% else %}
-          <img
-            src="{%static 'images/logo.png'%}"
-            alt="Placeholder Image"
-            class="menu-item-img"
-          />
-          {% endif %}
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">{{ dish.dish_name }}</span>
-              <span class="menu-item-price">€{{ dish.dish_price }}</span>
-            </h3>
-            <p class="menu-item-desc">
-              {{ dish.dish_description }}
-            </p>
-            
-        
-            
-          </div>
-          {% if user.is_staff %}
-            <a class="" href="{% url 'admin:restaurant_dishes_change' dish.id %}" target="_blank" rel="noopener noreferrer" style="padding: 5px; font-size: small; background-color: #2F7228; border-radius: 5px; color: white; text-decoration: none;">
-                Modifier
-            </a>
+      <div class="menu-item goingup">
+        {% if dish.dish_images %}
+        <img src="{{ dish.dish_images.url }}" 
+             alt="{{ dish.dish_name|default:'Image Placeholder' }}" 
+             class="menu-item-img">
         {% else %}
-           
+        <img src="{% static 'images/logo.png' %}" 
+             alt="Placeholder Image" 
+             class="menu-item-img">
         {% endif %}
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+            <span class="menu-item-name">{{ dish.dish_name }}</span>
+            <span class="menu-item-price">€{{ dish.dish_price }}</span>
+          </h3>
+          <p class="menu-item-desc">
+            {{ dish.dish_description }}
+          </p>
         </div>
-        
+        {% if user.is_staff %}
+        <a href="{% url 'admin:restaurant_dishes_change' dish.id %}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           style="padding: 5px; font-size: small; background-color: #2F7228; border-radius: 5px; color: white; text-decoration: none;">
+          Modifier
+        </a>
+        {% endif %}
+      </div>
       {% empty %}
       <p>No dishes available in this category.</p>
-      
       {% endfor %}
     </div>
   </div>
@@ -84,8 +76,8 @@
 
 {% endblock mainContent %}
 
-{%block js %} 
-<script> 
+{% block js %}
+<script>
   ScrollReveal().reveal('.goingup', {
     duration: 500,
     delay: 100,
@@ -97,4 +89,4 @@
     reset: true
   });
 </script>
-{%endblock js%}
+{% endblock js %}
