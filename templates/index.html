@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {%endblock css%}
 {% block mainContent %}
+
     <div class="container">
         <div class="row mb-5 mt-4">
             <div class="col-lg-6 col-md-12 w-100 my-3 d-flex justify-content-center align-item-center goingup ">
@@ -45,43 +46,55 @@
       
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center" id="Tripadvisor_id">
-          <div id="TA_cdsratingsonlynarrow160" class="TA_cdsratingsonlynarrow d-flex justify-content-center align-item-center"><ul id="mMBKsFv3Dh" class="TA_links bleGIsH"><li id="VFSllgxJWIxB" class="3YymBYDL0Q"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=160&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;shadow=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+          <!-- <div id="TA_cdsratingsonlynarrow160" class="TA_cdsratingsonlynarrow d-flex justify-content-center align-item-center"><ul id="mMBKsFv3Dh" class="TA_links bleGIsH"><li id="VFSllgxJWIxB" class="3YymBYDL0Q"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://www.tripadvisor.fr/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-18034-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=160&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;shadow=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
           <div id="TA_linkingWidgetRedesign517" class="TA_linkingWidgetRedesign d-flex justify-content-center align-item-center"><ul id="73bGuvFge4y" class="TA_links ivSWaLz"><li id="fLyVdyEsvlmV" class="QhlVcMY"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=linkingWidgetRedesign&amp;uniq=517&amp;locationId=27143834&amp;lang=fr&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
-        </div>
+        </div> -->
 
-        <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+        <!-- <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
           <div id="TA_cdswritereviewlg264" class="TA_cdswritereviewlg d-flex justify-content-center align-item-center"><ul id="Mzougnp" class="TA_links l9UcKha"><li id="0OKiprDJ" class="9TEB8jji66"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=264&amp;locationId=27143834&amp;lang=fr&amp;lang=fr&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
-        </div>
+        </div> -->
       </div>
       
     </div>
-
-    <div class="container my-5 ">
-      <h2 class="nosClient">Ce que disent nos clients</h2>
-      <div class="row d-flex justify-content-center align-item-center">
-          <div class="col-md-offset-2 col-md-8">
-              <div id="testimonial-slider" class="owl-carousel">
-
-                {% for rev in reviews %}
-                  <div class="testimonial shadow bg-light" style="border-radius:5px">
-                      <div class="pic">
-                          <img src="{% static "images/noProfile.jpg" %}" alt="">
-                      </div>
-                      <p class="description">
-                          {{rev.content}}
-                      </p>
-                      <h3 class="title">{{rev.review_owner}}
-                          <span class="post"> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>{{rev.stars}}</span>
-                      </h3>
-                  </div>
-              {%endfor%}
-                  
-              </div>
-          </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9 col-12">
+      <div class="container my-5 ">
+        <h2 class="nosClient">Ce que disent nos clients</h2>
+        <div class="row d-flex justify-content-center align-item-center">
+            <div class="col-md-offset-2 col-md-8">
+                <div id="testimonial-slider" class="owl-carousel">
+  
+                  {% for rev in reviews %}
+                    <div class="testimonial shadow bg-light" style="border-radius:5px">
+                        <div class="pic">
+                            <img src="{% static "images/noProfile.jpg" %}" alt="">
+                        </div>
+                        <p class="description">
+                            {{rev.content}}
+                        </p>
+                        <h3 class="title">{{rev.review_owner}}
+                            <span class="post"> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>{{rev.stars}}</span>
+                        </h3>
+                    </div>
+                {%endfor%}
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-12 d-flex justify-content-center align-item-center">
+      <div class="col-12 col-md-6 col-lg-4 my-2 d-flex justify-content-center align-item-center">
+        <div id="TA_cdswritereviewlg264" class="TA_cdswritereviewlg d-flex justify-content-center align-item-center"><ul id="Mzougnp" class="TA_links l9UcKha"><li id="0OKiprDJ" class="9TEB8jji66"><a target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=264&amp;locationId=27143834&amp;lang=fr&amp;lang=fr&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
       </div>
+    </div>
+  </div>
+</div>
+    
   </div>
 
     
@@ -129,7 +142,7 @@
 </div>
 
 
-<div class="container my-5" id="Contactez_nous goingup">
+<div class="container my-5 goingup" id="Contactez_nous" >
   <div class="row">
     <!-- Contact Form Section -->
     <div class="col-md-6 p-4 bg-light contact-form-box goingup">
@@ -147,7 +160,7 @@
           <label for="message" class="form-label">Message</label>
           <textarea id="message" rows="4" class="form-control contact-input" placeholder="Message" required></textarea>
         </div>
-        <button type="button" class="btn w-100 contact-button" onclick="sendMessage()">Envoyer un message via WhatsApp</button>
+        <button type="button" class="btn w-100 contact-button" onclick="sendMessage()" id="sendmessageBtn" number="{{setting.phone}}">Envoyer un message via WhatsApp</button>
       </form>
     </div>
     <!-- Map Section -->
@@ -232,13 +245,13 @@
   <div class="col-sm-4 w-100">
     <img src="{%static 'images/logo.png'%}" alt="" class="w-100">
   </div>
-  <div class="col-sm-4"><h1></h1></div>
-  <div class="col-sm-4">
+  {% comment %} <div class="col-sm-4"><h1></h1></div> {% endcomment %}
+  <div class="col-sm-8">
   <div class="business-hours">
   <h2 class="title" >Jours et horaires d'ouverture</h2>
   <ul class="list-unstyled opening-hours">
     {% for day in openingDay %}
-  <li>{{day.day}} <span class="pull-right">{%if day.oppened%}{{day.from1}} - {{day.to1}}{%else%}fermée{% endif %}</span></li>
+  <li>{{day.day}} <span class="pull-right" style="font-size:small !important;">{%if day.oppened%}{{day.from1}} - {{day.to1}} {%if day.from2%} --> {{day.from2}} - {{day.to2}}{%else%} <span></span>{% endif %}{%else%}fermée{% endif %}</span></li>
     {%endfor%}
   </ul>
   </div>
@@ -311,7 +324,6 @@
 
 <!-- 
 <iframe src="https://www.tripadvisor.fr/Restaurant_Review-g672981-d27143834-Reviews-La_Pizzeria-Solesmes_Sarthe_Pays_de_la_Loire.html" width="100%" height="500px" frameborder="0" class="goingup"></iframe> -->
-
 
 
     

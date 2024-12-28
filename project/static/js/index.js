@@ -26,7 +26,8 @@ $(document).ready(function() {
     const whatsappMessage = `Nom et prénom: ${fullName}\nSujet: ${subject}\nMessage: ${message}`;
 
 
-    const phoneNumber = "+96181121347"; 
+    const phoneNumbers = document.getElementById("sendmessageBtn"); 
+    const phoneNumber = phoneNumbers.getAttribute("number")
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Open WhatsApp URL in a new tab

@@ -6,10 +6,10 @@
 {% endblock css %}
 
 {% block mainContent %}
-<a href="https://wa.me/your-phone-number" target="_blank" class="fixed-tel wp">
+<a href="https://wa.me/{{setting.phone}}" target="_blank" class="fixed-tel wp">
   <i class="fab fa-whatsapp"></i> 
 </a>
-<a class="fixed-tel" href="tel:+8548222xxx" target="_blank" title="Call Now"><i class="fas fa-phone-alt"></i> </a>
+<a class="fixed-tel" href="tel:{{setting.phone}}" target="_blank" title="Call Now"><i class="fas fa-phone-alt"></i> </a>
   </body>
 </html>
 <div class="container-fluid welcomeImgContainer">
@@ -41,7 +41,7 @@
     <div class="menu-group">
       {% for dish in category.dishes.all %}
         
-        <div class="menu-item shadow goingup">
+        <div class="menu-item  goingup">
           {% if dish.dish_images %}
           <img
             src="{{ dish.dish_images.url }}"

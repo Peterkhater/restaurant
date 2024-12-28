@@ -45,6 +45,7 @@
 .menu-item-price{
   color: #2F7228;
   padding-right: 3px;
+  font-size: large;
 }
 .menu-item-img {
   width: 80px;
@@ -65,7 +66,7 @@
 }
 
 .menu-item-name {
-  font-size: large;
+  font-size: 30px;
   font-family: "Dancing Script", cursive;
 }
 
@@ -96,7 +97,13 @@
   width: 100%;
   overflow: auto;
   background-color: rgb(246, 246, 246);
+  position: sticky;
+  top: 0;
 }
+.category_list_container:focus{
+  background-color: #2F7228;
+}
+
 .category_list_container::-webkit-scrollbar{
   width: 100px; 
   height: 10px;
@@ -144,7 +151,7 @@
 
 @media (max-width:500px){
   .menu-item-name {
-    font-size: normal;
+    font-size: 20px;
     font-weight: 900;
   }
   
